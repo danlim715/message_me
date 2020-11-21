@@ -1,1 +1,46 @@
-h1 You have reached the root route
+h4.ui.center.aligned.medium.icon.header
+  i.circular.orange.coffee.icon
+  | Say Something
+
+.ui.two.column.grid
+  .twelve.wide.column
+    .ui.fluid.raised.card.chatbox
+      .content
+        .ui.feed
+          .event
+            .content
+              .summary
+                em Elliot Fu
+                | : Hello
+          .event
+            .content
+              .summary
+                em Stevie Feliciano
+                | : Hi!
+          .event
+            .content
+              .summary
+                em Helen Troy
+                | : Hows it going?
+          .event
+            .content
+              .summary
+                em Christian Rocha
+                | : Pretty good :)
+      .extra.content
+        form.ui.reply.form
+          .field
+            .ui.fluid.icon.input
+              input type="text" placeholder="Enter a message..."
+              i.bordered.inverted.orange.edit.icon
+
+  .four.wide.column
+    .ui.fluid.raised.card.chatbox
+      .content
+        .ui.inverted.vertical.menu
+          a.active.item
+            | Home
+          a.item
+            | Messages
+          a.item
+            | Friends
