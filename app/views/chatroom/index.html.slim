@@ -7,26 +7,12 @@ h4.ui.center.aligned.medium.icon.header
     .ui.fluid.raised.card.chatbox
       .content
         .ui.feed
-          .event
-            .content
-              .summary
-                em Elliot Fu
-                | : Hello
-          .event
-            .content
-              .summary
-                em Stevie Feliciano
-                | : Hi!
-          .event
-            .content
-              .summary
-                em Helen Troy
-                | : Hows it going?
-          .event
-            .content
-              .summary
-                em Christian Rocha
-                | : Pretty good :)
+          - @messages.each do |message|
+            .event
+              .content
+                .summary
+                  em #{message&.user&.username}
+                  | : #{message.body}
       .extra.content
         form.ui.reply.form
           .field
