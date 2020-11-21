@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails", "~> 4.0"
 end
 
 group :development do
@@ -56,3 +57,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "slim", "~> 4.1"
 
 gem "semantic-ui-sass", "~> 2.4"
+
+gem "bcrypt", "~> 3.1"
+
+gem "rspec", "~> 3.10"
+
+gem "shoulda-matchers", "~> 4.4"
+
+gem "hirb", "~> 0.7.3"
