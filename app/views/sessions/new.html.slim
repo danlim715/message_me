@@ -8,16 +8,16 @@
 .ui.placeholder.segment
   .ui.two.column.very.relaxed.stackable.grid
     .column
-      .ui.form
+      = form_with(model: User.new, html: { class: "ui form" }, url: login_path) do |f|
         .field
-          label Username
+          = f.label :username, "Username"
           .ui.left.icon.input
-            input type="text" placeholder="Username"
+            = f.text_field :username, placeholder: "Username"
             i.user.icon
         .field
-          label Password
+          = f.label :password, "Password"
           .ui.left.icon.input
-            input type="password"
+            = f.password_field :password, placeholder: "Password"
             i.lock.icon
         button.ui.orange.button Login
     .middle.aligned.column
