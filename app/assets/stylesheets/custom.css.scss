@@ -8,3 +8,9 @@
   height: 15em;
   overflow: auto;
 }
+
+#new_message {
+  button {
+    display: none;
+  }
+}

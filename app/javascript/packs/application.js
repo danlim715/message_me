@@ -23,10 +23,20 @@ scrollBottom = () => {
   }
 }
 
+clearMessageForm = () => {
+  $('#message_body').on('keydown', (e) => {
+    if (e.key == "Enter") {
+      $('button').trigger("click");
+      e.target.value = "";
+    }
+  });
+}
+
 $(document).on('turbolinks:load', () => {
   $('.ui.dropdown').dropdown();
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  clearMessageForm();
   scrollBottom();
 })
